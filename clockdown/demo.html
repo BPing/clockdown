@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.clockdown.js"></script>
+    <link href="css/clockdown.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="demo" style="display: inline-block"></div>
+<div class="demo1" style="display: inline-block"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $('.demo').clockdown({time:3600}).start();
+    $('.demo1').clockdown().setTime(3600).setCallback({start:function(){console.log("new")}}).start();
+</script>
